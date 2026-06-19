@@ -1,0 +1,95 @@
+# list is called sequence type data
+
+student: !!seq
+  - marks
+  - name
+  - roll_no
+
+# like this also we can write it 👇
+student: [marks, name, roll_no]
+
+# some time it is possible that some of the keys of the seq will be 
+# empty this is know as sparse seq
+sparse seq:
+  - hey
+  - how
+  -
+  - null
+  - sup
+
+# nested sequence
+-
+  - mango
+  - apple
+  - banana
+- 
+  - marks
+  - roll num
+  - date
+
+# key: value pairs are called maps
+!!map
+
+# nested mappings: map withing an map
+name: Khushdeep
+role:
+  age: 20
+  job: khush
+
+# same we can write it in form 👇
+name: Khushdeep
+role: { age: 20, job: khush}
+
+# pairs: key may have duplicate values
+
+# !!pairs
+pair example: !!pairs   # this will be an array of hashtable
+  - job: student
+  - job: intern
+
+# same as
+pair example: !!pairs [job: student, job: teacher]
+
+# !!set will allow you to have unique values
+names: !!set
+ ? Kunal
+ ? Khushdeep
+ ? Ram
+
+---
+
+# dictionary !!omap
+
+People: !!omap
+  - Khushdeep:
+    name: khush rehna
+    age: 20
+    height: 5.7
+  - Ram:
+    name: ladoo
+    age: 21
+    height: 5.6
+
+# reusing some properties, for reusing we use anchors
+likings: &likes    # this become the anchor 
+  fav fruit: musk melon
+  dislikes: sell
+
+person1:
+  name: Shyam
+  <<: *likes
+
+person2:
+  name: Shyam
+  <<: *likes
+
+person3:
+  name: Shyam
+  <<: *likes
+# those content in likings are getting used with the help of anchors 
+
+# we can also override
+person2:
+  name: Shyam
+  <<: *likes
+  fav fruit: papaya

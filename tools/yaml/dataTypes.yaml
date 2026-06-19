@@ -1,0 +1,52 @@
+# String variables
+
+myself : "Shyam Baranwal"
+fruit : "Apple"
+job : "swe"
+---
+bio: | # "|"" means literal block scalar
+  hey my name is shyam 
+  I am from azamgarh
+
+# Write a single line in multiple lines
+message: >
+  this is the one
+  line, if you convert 
+  in any other language
+  it consider it as 
+  one line 
+
+number: 123 # integer data type 
+marks: 21.21 # float data type
+booleanValue: true # boolean data type
+
+# specify the type explicitly
+
+# integer
+zero: !!int 0
+positiveNum: !!int 32
+negativeNum: !!int -21
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 # for 540,000
+exponential numbers: 6.023E43
+
+# floating point numbers
+marks: !!float 43.23
+infinite: !!float .inf
+not a num: .nan
+
+# string
+mssg: !!str this is the string
+
+# boolean
+booleanValuee: !!bool yes
+
+# null
+surname: !!null NULL # or null NULL ~
+
+# date and times
+date: !!timestamp 2002-12-13 # YYYY-MM-DD
+india time: 2001-12-12T-2:59:43.10 +5:30
+with out time zone: 2001-12-12T-2:59:43.10 

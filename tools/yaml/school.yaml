@@ -1,0 +1,11 @@
+---
+School:
+  - name: DPS
+    principal: Someone
+    Students:
+      - rno: 12
+        name: Kunal Kushawaha
+        marks: 92
+      - rno: 13
+        name: Kesav Kushawaha
+        marks: 93

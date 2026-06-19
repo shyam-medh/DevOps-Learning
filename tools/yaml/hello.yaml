@@ -1,0 +1,30 @@
+# Key - VALUE Pair
+"name" : "Shyam Baranwal"
+"apple" : "I am red Fruit"
+1 : "this is the roll number of Shyam"
+
+---
+
+# list
+- apple
+- mango
+- banana
+- Apple
+
+---
+
+# BLOCK STYLE
+
+cities:
+  - Azamgrah
+  - Phagwara
+  - Jalandhar
+  - new delhi
+
+# for block style we can use this type of scripting 
+
+cities: [Azamgarh, Phagwara, Jalandhar, new delhi]
+ 
+# and for KEY - VALUE Pair
+
+{name : "yellow fruit", age : 42}

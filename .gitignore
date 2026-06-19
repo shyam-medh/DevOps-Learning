@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Nested repository metadata from copied examples
+**/.git/
+
+# Terraform local/state files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Private keys and certificates
+*.pem
+*.key
+id_rsa
+id_rsa.pub
+terra-key-ec2
+terra-key-ec2.pub
+K8s-key.pem
+jenkins-learning-key.pem
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
