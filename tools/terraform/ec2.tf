@@ -58,10 +58,10 @@ resource "aws_security_group" "my_security_group"{ // resource name
 resource "aws_instance" "my_instance"{ // resource name
     key_name = aws_key_pair.my_key.key_name // reference to the key pair name
     security_groups = [aws_security_group.my_security_group.name] // reference to the security group name
-    instance_type = "t3.micro" // instance type
-    ami = "ami-01a00762f46d584a1" # AMI ID for Amazon Linux 2 in ap-south-1 region
+    instance_type = var.ec2_instance_type// instance type
+    ami = var.ec2_ami # AMI ID for Amazon Linux 2 in ap-south-1 region
     root_block_device{ // root block device configuration
-        volume_size = 15 // size of the root volume in GB
+        volume_size = var.ec2_root_storage_size // size of the root volume in GB
         volume_type = "gp3" // type of the root volume
     }
     tags = {

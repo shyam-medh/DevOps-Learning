@@ -22,6 +22,7 @@ override.tf.json
 *.key
 id_rsa
 id_rsa.pub
+*accessKeys*.csv
 terra-key-ec2
 terra-key-ec2.pub
 K8s-key.pem
