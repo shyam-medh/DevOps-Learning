@@ -33,3 +33,7 @@ jenkins-learning-key.pem
 Thumbs.db
 .vscode/
 .idea/
+
+# AWS CLI files
+tools/terraform/aws/
+tools/terraform/awscliv2.zip
