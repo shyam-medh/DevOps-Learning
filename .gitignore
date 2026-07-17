@@ -35,5 +35,5 @@ Thumbs.db
 .idea/
 
 # AWS CLI files
-tools/terraform/aws/
-tools/terraform/awscliv2.zip
+tools/terraform/terraform-learning-for-devops/aws/
+tools/terraform/terraform-learning-for-devops/awscliv2.zip
