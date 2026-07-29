@@ -59,7 +59,7 @@ resource "aws_instance" "my_instance"{ // resource name
     # count = 3 // this is the meta argument that allows us to create multiple instances of the same resource
     for_each =({
         instance-tws-micro = "t3.micro"
-        instance-tws-medium = "t3.medium"
+        instance-tws-micro = "t3.micro"
     })
 
     depends_on = [aws_security_group.my_security_group] // ensure that the security group is created before the EC2 instance
@@ -82,7 +82,3 @@ resource "aws_instance" "my_instance"{ // resource name
 // this is for importing an existing EC2 instance into Terraform state file. 
 // This is useful when you have an existing EC2 instance that was created outside of Terraform and 
 // you want to manage it using Terraform.
-resource "aws_instance" "my_new_instance"{ // resource name
-    ami = "unknown" // AMI ID for the existing EC2 instance
-    instance_type = "unknown" // instance type for the existing EC2 instance
-}
